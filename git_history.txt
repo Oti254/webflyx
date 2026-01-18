@@ -1,0 +1,380 @@
+ 1156  git version
+ 1159  sudo add-apt-repository ppa:git-core/ppa
+ 1160  sudo apt install git
+ 1161  git --version
+ 1162  git config list || { echo 'Please install git version 2.46 or newer'; false; }
+ 1163  man git
+ 1164  git log
+ 1165  git status
+ 1166  git config get user.email
+ 1167  git config get user.name
+ 1170  git config
+ 1171  git config get user.name
+ 1172  git config get user.email
+ 1173  git config set --global init.defaultBranch master
+ 1175  git branch
+ 1176  cat ~/.gitconfig 
+ 1177  git config list || { echo 'Please install git version 2.46 or newer'; false; }
+ 1178  git config get --global user.name
+ 1179  git config get --global init.defaultBranch
+ 1180  git confifg list
+ 1181  git config list
+ 1192  mkdir git
+ 1194  cd git
+ 1198  git init
+ 1201  ls .git
+ 1203  git status
+ 1207  git add contents.md 
+ 1208  git status
+ 1209  git commit -m "A: add contents.md"
+ 1210  git status
+ 1211  git --no-pager log -n 1
+ 1212  git log
+ 1213  git log -n 10
+ 1215  ls -al .git/
+ 1216  ls -al .git/objects/
+ 1217  ls -al .git/objects/99/
+ 1218  cat .git/objects/99/00ac2c410524325304e9d6a82141757434c495 
+ 1219  xxd .git/objects/99/00ac2c410524325304e9d6a82141757434c495 
+ 1220  xxd .git/objects/99/00ac2c410524325304e9d6a82141757434c495 > /tmp/commit_object_hex.txt
+ 1222  git log
+ 1223  git cat-file 9900ac2c410524325304e9d6a82141757434c495
+ 1224  git cat-file 9900ac2c410524325304e9d6a82141757434c495 -p
+ 1225  git log -1
+ 1226  git cat-file -p 9900ac2c410524325304e9d6a82141757434c495
+ 1227  git cat-file -p 5b21d4f16a4b07a6cde5a3242187f6a5a68b060f
+ 1229  git cat-file -p 5b21d4f16a4b07a6cde5a3242187f6a5a68b060f
+ 1230  git cat-file -p  ef7e93fc61a91deecaa551c4707e4c3049af42c9
+ 1232  git add titles.md 
+ 1233  git status
+ 1234  git commit -m "b: Add titles"
+ 1235  git commit --amend "B: add titles"
+ 1236  git log
+ 1237  git commit --amend -m "B: add titles"
+ 1238  git log
+ 1240  git log -1
+ 1241  git cat-file -p 745b1cfbdd12ae0fb703bddff602b95a9ade227e
+ 1242  git no--pager log 10
+ 1243  git --no-pager log -n 10
+ 1245  git cat-file -p 745b1cfbdd12ae0fb703bddff602b95a9ade227e
+ 1246  git cat-file -p 37712fab0aa902b37e2197ebb71e4e1ba4f45f3d
+ 1247  git cat-file -p  66693b8d72daef9170108c6ab4b3abd7f3950dd2
+ 1253  git add *.md
+ 1254  git commit -m "C: add quotes"
+ 1255  git log
+ 1256  git cat-file -p 745b1cfbdd12ae0fb703bddff602b95a9ade227e
+ 1257  git cat-file -p 37712fab0aa902b37e2197ebb71e4e1ba4f45f3d
+ 1258  git cat-file -p  66693b8d72daef9170108c6ab4b3abd7f3950dd2
+ 1259  git config set user.name "ThePrimeagen"
+ 1260  git config set user.email "webflyx.ceo"
+ 1261  git config list --local
+ 1262  git config list --global
+ 1263  cat .git/config
+ 1267  cat .git/config 
+ 1268  git config set user.name "TheLaneagen"
+ 1269  git config set user.email "webflyx.cto"
+ 1270  cat .git/config
+ 1271  git config list
+ 1272  git config set webflyx.ceo "ThePrimeagen'
+ 1273  git config set webflyx.ceo "ThePrimeagen"
+ 1274  git config list
+ 1277  git config list
+ 1279  git config set webflyx.cto "TheLaneagen"
+ 1280  git config list
+ 1281  git config set webflyx.valuation "mid"
+ 1282  git config list
+ 1283  cat .git/config 
+ 1284  git config get webflyx
+ 1285  git config get ceo
+ 1286  git config get webflyx.ceo
+ 1287  git config get webflyx.cto
+ 1288  git config get webflyx.valuation 
+ 1289  git config unset webflyx.cto 
+ 1290  git config list
+ 1291  git config unset webflyx
+ 1293  git config list
+ 1294  git config list --local
+ 1295  git config set --append webflyx.ceo "Warren"
+ 1296  git config list --local
+ 1297  git config set --append webflyx.ceo "Sarah"
+ 1298  git config set --append webflyx.ceo "Carson"
+ 1299  git config list --local
+ 1300  git config unset --all
+ 1301  git config unset --all webflyx.ceo
+ 1302  git config list --local
+ 1303  git config remove-section webflyx
+ 1304  git config list --local
+ 1305  git config remove-section user
+ 1306  git config remove-section *
+ 1307  cat .git/config 
+ 1308  git config list --global
+ 1311  cd bootdotdev/git/webflyx/
+ 1317  git log
+ 1318  git log --no-pager -n 1
+ 1319  git log --no-page -n 1
+ 1321  git branch
+ 1322  git config set --global init.defaultBranch main
+ 1323  git branch
+ 1324  git branch -m master main
+ 1325  git branch
+ 1326  git log
+ 1327  git switch -c add_classics
+ 1328  git branch
+ 1329  git switch main
+ 1330  git branch
+ 1331  git switch add_classics 
+ 1332  git branch
+ 1334  git add classics.csv 
+ 1335  git commit -m "D: add classics"
+ 1336  git log
+ 1337  git log --decorate
+ 1338  git log --decorate=full
+ 1339  git log --decorate=no
+ 1340  git log --decorate=full
+ 1341  git log --oneline
+ 1342  git log --decorate=full --oneline 
+ 1343  cat .git/refs/heads/
+ 1344  ls .git/refs/heads/
+ 1345  cat .git/refs/heads/add_classics 
+ 1346  cat .git/refs/heads/main 
+ 1347  git switch main 
+ 1348  git branch
+ 1355  git branch
+ 1356  git add contents.md 
+ 1357  git commit -m "E: updated contents"
+ 1358  git log --oneline
+ 1359  git log --oneline --graph
+ 1360  git log --oneline --graph --all
+ 1361  git log --graph --all
+ 1362  git log --oneline --graph --all
+ 1363  git log --oneline --graph --all --decorate
+ 1364  git log --oneline --graph --all --decorate=full
+ 1365  git --no-pager log --oneline --graph --all --decorate=full
+ 1366  git branch
+ 1367  git merge add_classics 
+ 1368  git --no-pager log --oneline --graph --all --decorate=full
+ 1369  git log --oneline --graph --parents
+ 1370  git mergetool --tool -help
+ 1371  git mergetool --tool-help
+ 1372  git config --global core.editor "vim"
+ 1373  git config list --global
+ 1374  git --no-pager log --graph --parents --decorate
+ 1375  git --no-pager log --graph --parents --decorate --oneline
+ 1376  git log --oneline --decorate --graph --parents
+ 1377  git branch
+ 1378  git branch -d add_classics 
+ 1379  git branch
+ 1380  git switch -c update_titles
+ 1382  git add titles.md 
+ 1383  git commit -m "G: added The Curious Case of BB to title"
+ 1384  git log --oneline
+ 1385  git log --oneline --decorate --graph --parents
+ 1386  git branch
+ 1387  git switch main
+ 1388  git branch
+ 1389  git log
+ 1390  git log --oneline
+ 1391  git switch update_titles
+ 1392  git log
+ 1393  git log --oneline
+ 1394  git commit --amend -m "G: updated titles"
+ 1395  git log --oneline
+ 1396  git switch main
+ 1397  git branch
+ 1398  git log --oneline
+ 1399  git merge update_titles 
+ 1400  git log
+ 1401  git log --oneline 
+ 1402  git branch
+ 1403  git branch -d update_titles 
+ 1404  git branch
+ 1405  git log --oneline --graph --decorate --parents
+ 1406  git switch -c update_dune cbbd938045bb85d37edbe7d9482106c27cff72a9
+ 1407  git log --oneline -n 1
+ 1408  git log --oneline --graph --parents
+ 1415  cd git/
+ 1419  git branch
+ 1420  git log --oneline -n 1
+ 1421  git log --oneline --graph --parents --decorate
+ 1424  git add quotes/dune.md 
+ 1425  git commit -m "H: updated dune - the all spice"
+ 1427  git add quotes/dune.md 
+ 1428  git commit -m "I: updated dune - fear"
+ 1429  git rebase main
+ 1430  git log --oneline
+ 1433  git status
+ 1434  git commit -m "J: intern changes"
+ 1435  git add titles.md 
+ 1436  git commit -m "J: intern changes"
+ 1437  git log --oneline
+ 1438  git branch
+ 1439  git log --no-pager
+ 1442  git --no-pager log
+ 1443  git reset --soft c357d983573b08e2fccb6802934d99d9066cee72
+ 1444  git log --oneline
+ 1445  git status
+ 1446  git reset --soft 63310a65aeddace4a0b065bd78570cfe9a2dd8f4
+ 1447  git log --oneline
+ 1448  git status
+ 1450  git reset --hard 63310a65aeddace4a0b065bd78570cfe9a2dd8f4
+ 1452  git status
+ 1457  git init
+ 1458  git branch
+ 1460  git config list --local
+ 1461  git config list --global
+ 1462  git remote add webflyx ../webflyx
+ 1463  find .git/objects
+ 1464  git fetch
+ 1465  find .git/objects
+ 1466  git log
+ 1467  git branch
+ 1468  git fetch origin
+ 1473  git fetch origin
+ 1480  git remote add origin ../webflyx
+ 1481  find .git/objects
+ 1482  git fetch
+ 1483  git log
+ 1484  git fetch origin
+ 1485  git log --oneline
+ 1486  git log origin/update_dune
+ 1487  git merge origin/main 
+ 1488  git log --oneline
+ 1496  cd bootdotdev/git/
+ 1502  git remote add origin https://github.com/Oti254/webflyx.git
+ 1503  git ls-remote
+ 1504  git remote remove origin
+ 1505  git remote add origin https://github.com/Oti254/webflyx.git
+ 1506  git ls-remote
+ 1507  git branch
+ 1508  git switch main
+ 1509  git log --oneline
+ 1510  git push origin main
+ 1511  gh auth setup-git
+ 1512  git push origin main
+ 1514  git status
+ 1515  git log --oneline
+ 1516  git switch update_dune 
+ 1517  git log --oneline
+ 1518  git switch main 
+ 1521  ping github.com
+ 1523  ping github.com
+ 1525  git branch
+ 1526  cd bootdotdev/git/webflyx/
+ 1527  git branch
+ 1528  git config set pull.rebase false
+ 1529  git branch
+ 1530  git switch update_dune 
+ 1531  git merge main
+ 1533  git log --oneline
+ 1534  git switch main 
+ 1535  git merge main 
+ 1536  git log --oneline
+ 1537  git merge update_dune 
+ 1538  git log --oneline --graph --decorate
+ 1539  git log --oneline
+ 1540  git pull origin main
+ 1541  git log --oneline
+ 1544  git branch -d update_dune 
+ 1545  git branch
+ 1547  git switch -c add_classics
+ 1549  git add classics.csv 
+ 1550  git commit -m "L: updated classics"
+ 1551  git pysh origin add_classics
+ 1552  git push origin add_classics 
+ 1553  git config set --global pull.rebase true
+ 1554  git config list --global
+ 1555  git switch main
+ 1556  git branch
+ 1557  git pull origin main
+ 1558  git branch -d add_classics 
+ 1559  git log --oneline
+ 1569  vim .gitignore
+ 1572  git add *
+ 1573  git commit -m "M: added guilty_pleasures"
+ 1574  git push origin main
+ 1575  git log --oneline
+ 1576  git reset --hard 2dcfa3c
+ 1577  git log --oneline
+ 1579  vim .gitignore 
+ 1583  git add *
+ 1584  git commit -m "M: added guilty pleasures"
+ 1585  vim .gitignore 
+ 1586  git log --onelien
+ 1587  git log --oneline
+ 1588  git reset soft --2dcfa3c
+ 1589  git reset --soft 2dcfa3c
+ 1590  git log --oneline
+ 1592  git add *
+ 1593  git status
+ 1594  git restore --staged guilty_pleasures.md 
+ 1595  git statsu
+ 1596  git status
+ 1598  git add *
+ 1599  git commit -m "added gitignore"
+ 1600  git add .gitignore 
+ 1601  git log --oneline
+ 1602  git commit -m "M: added gitignore"
+ 1603  git log --oneline
+ 1609  vim .gitignore
+ 1610  git add
+ 1611  git add .
+ 1612  git status
+ 1613  git commit -m "N: added advert"
+ 1614  git log --oneline
+ 1615  git push origin main
+ 1619  git pull origin main
+ 1620  git push origin main
+ 1623  git init
+ 1624  git add golang/
+ 1626  git commit -m "All go lessons"
+ 1627  git log --oneline
+ 1628  git branch
+ 1718  git log --oneline
+ 1719  git log
+ 1720  git remote add origin https://github.com/Oti254/bootdotdev.git
+ 1721  git branch -M main
+ 1722  git push -u origin main
+ 1727  git pull origin main
+ 1728  git status
+ 1731  git pull origin main
+ 1732  git status
+ 1733  git add golang
+ 1734  git commit -m "Learning golang"
+ 1735  git push
+ 1736  git push origin main
+ 1737  git fetch
+ 1738  git pull origin main
+ 1739  git push
+ 1742  git add README.md 
+ 1743  git commit -m "updating README"
+ 1744  git push
+ 1748  git add README.md 
+ 1749  git commit -m "adding a README"
+ 1750  git push
+ 1751  git status
+ 1766  git add .
+ 1767  git status
+ 1768  git rm --cached git/webflyx
+ 1769  git status
+ 1770  fit rm -f --cached git/webflyx
+ 1771  git rm -f --cached git/webflyx
+ 1772  git status
+ 1773  git add README.md 
+ 1774  git commit -m "updated README"
+ 1775  git push
+ 1794  go mod init github.com/Oti254/bootdotdev
+ 1821  git status
+ 1823  vim .gitignore
+ 1824  git add .
+ 1825  git status
+ 1827  git commit -m "added gitignore"
+ 1828  git push origin main
+ 1829  git log
+ 1830  git log --oneline
+ 1832  git status
+ 1853  go mod init github.com/Oti254/mystrings
+ 1873  go get github.com/wagslane/go-tinytime
+ 1874  go mod init github.com/Oti254/datetest
+ 1879  go get github.com/wagslane/go-tinytime
+ 1884  git status
+ 1885  git branch
